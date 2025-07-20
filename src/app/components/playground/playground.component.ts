@@ -452,8 +452,8 @@ export class PlaygroundComponent {
   selector: 'app-demo',
   template: \\\`
     <div class="demo-container">
-      <h2>{{ '{' }}{{ '{' }} title {{ '}' }}{{ '}' }}</h2>
-      <p>{{ '{' }}{{ '{' }} message {{ '}' }}{{ '}' }}</p>
+      <h2>{{'{{'}} title {{'}}'}}</h2>
+      <p>{{'{{'}} message {{'}}'}}</p>
       <button (click)="changeMessage()">
         Click me!
       </button>
@@ -476,8 +476,8 @@ export class DemoComponent {
 }`;
 
   templateCode = `<div class="demo-container">
-  <h2>{{ title }}</h2>
-  <p>{{ message }}</p>
+  <h2>{{'{{'}} title {{'}}'}}</h2>
+  <p>{{'{{'}} message {{'}}'}}</p>
   <button (click)="changeMessage()">
     Click me!
   </button>

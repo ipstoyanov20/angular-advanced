@@ -75,7 +75,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-hello',
   template: \\\`
-    <h1>Hello, {{ '{' }}{{ '{' }} name {{ '}' }}{{ '}' }}!</h1>
+    <h1>Hello, {{'{{'}} name {{'}}'}}!</h1>
     <button (click)="changeName()">Change Name</button>
   \\\`
 })
@@ -126,8 +126,8 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
   selector: 'app-user-card',
   template: \\\`
     <div class="user-card">
-      <h3>{{ '{' }}{{ '{' }} user.name {{ '}' }}{{ '}' }}</h3>
-      <p>{{ '{' }}{{ '{' }} user.email {{ '}' }}{{ '}' }}</p>
+      <h3>{{'{{'}} user.name {{'}}'}}</h3>
+      <p>{{'{{'}} user.email {{'}}'}}</p>
       <button (click)="sendMessage()">Send Message</button>
     </div>
   \\\`,
@@ -152,7 +152,7 @@ export class UserCardComponent implements OnInit, OnDestroy {
   }
   
   sendMessage() {
-    alert(\\\`Sending message to \\\${this.user.name}\\\`);
+    alert(\\\`Sending message to \${{'{{'}}this.user.name{{'}}'}}\\\`);
   }
 }
             `
