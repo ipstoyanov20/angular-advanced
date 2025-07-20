@@ -37,9 +37,9 @@ import { RouterModule } from '@angular/router';
                 <span class="dot green"></span>
               </div>
               <pre class="code-content">
-<span class="keyword">import</span> &#123; <span class="class">Component</span> &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;
+<span class="keyword">import</span> &#123; <span class="class">Component</span> &#125; <span class="keyword">from</span> <span class="string">'&#64;angular/core'</span>;
 
-<span class="decorator">@Component</span>(&#123;
+<span class="decorator">&#64;Component</span>(&#123;
   <span class="property">selector</span>: <span class="string">'app-hello'</span>,
   <span class="property">template</span>: <span class="template">&#96;
     &lt;h1&gt;Hello &#123;&#123; name &#125;&#125;!&lt;/h1&gt;
@@ -50,7 +50,7 @@ import { RouterModule } from '@angular/router';
 &#125;)
 <span class="keyword">export class</span> <span class="class">HelloComponent</span> &#123;
   <span class="property">name</span> = <span class="string">'Angular'</span>;
-  
+
   <span class="method">greet</span>() &#123;
     <span class="keyword">alert</span>(<span class="template">&#96;Hello &#36;&#123;this.name&#125;!&#96;</span>);
   &#125;
@@ -70,31 +70,26 @@ import { RouterModule } from '@angular/router';
               <h3>Comprehensive Curriculum</h3>
               <p>From basic components to advanced patterns, covering everything you need to become an Angular expert.</p>
             </div>
-            
             <div class="feature-card">
               <div class="feature-icon">💻</div>
               <h3>Interactive Examples</h3>
               <p>Learn by doing with live code examples and interactive exercises that run in your browser.</p>
             </div>
-            
             <div class="feature-card">
               <div class="feature-icon">🎯</div>
               <h3>Progressive Learning</h3>
               <p>Structured learning path that builds knowledge step by step, from beginner to advanced.</p>
             </div>
-            
             <div class="feature-card">
               <div class="feature-icon">🚀</div>
               <h3>Modern Practices</h3>
               <p>Learn the latest Angular features, best practices, and industry-standard development patterns.</p>
             </div>
-            
             <div class="feature-card">
               <div class="feature-icon">🎮</div>
               <h3>Hands-on Playground</h3>
               <p>Experiment with Angular concepts in a safe, interactive environment with instant feedback.</p>
             </div>
-            
             <div class="feature-card">
               <div class="feature-icon">📈</div>
               <h3>Track Progress</h3>
