@@ -450,21 +450,21 @@ export class PlaygroundComponent {
 
 @Component({
   selector: 'app-demo',
-  template: \`
+  template: \\\`
     <div class="demo-container">
-      <h2>{{ title }}</h2>
-      <p>{{ message }}</p>
+      <h2>{{ '{' }}{{ '{' }} title {{ '}' }}{{ '}' }}</h2>
+      <p>{{ '{' }}{{ '{' }} message {{ '}' }}{{ '}' }}</p>
       <button (click)="changeMessage()">
         Click me!
       </button>
     </div>
-  \`,
-  styles: [\`
+  \\\`,
+  styles: [\\\`
     .demo-container {
       padding: 20px;
       text-align: center;
     }
-  \`]
+  \\\`]
 })
 export class DemoComponent {
   title = 'Hello Angular!';
@@ -523,26 +523,26 @@ button:hover {
 
 @Component({
   selector: 'app-binding',
-  template: \`
+  template: \\\`
     <div class="binding-demo">
       <h3>Data Binding Example</h3>
       <input [(ngModel)]="name" placeholder="Enter your name">
-      <p>Hello, {{ name }}!</p>
+      <p>Hello, {{ '{' }}{{ '{' }} name {{ '}' }}{{ '}' }}!</p>
       <button (click)="greet()">Greet</button>
     </div>
-  \`
+  \\\`
 })
 export class BindingComponent {
   name = 'Angular Developer';
   
   greet() {
-    alert(\`Hello, \${this.name}!\`);
+    alert(\\\`Hello, \\\${this.name}!\\\`);
   }
 }`,
       template: `<div class="binding-demo">
   <h3>Data Binding Example</h3>
   <input [(ngModel)]="name" placeholder="Enter your name">
-  <p>Hello, {{ name }}!</p>
+  <p>Hello, {{ '{' }}{{ '{' }} name {{ '}' }}{{ '}' }}!</p>
   <button (click)="greet()">Greet</button>
 </div>`,
       styles: `.binding-demo {
@@ -567,13 +567,13 @@ input {
 
 @Component({
   selector: 'app-child',
-  template: \`
+  template: \\\`
     <div class="child-component">
       <h4>Child Component</h4>
-      <p>Message from parent: {{ message }}</p>
+      <p>Message from parent: {{ '{' }}{{ '{' }} message {{ '}' }}{{ '}' }}</p>
       <button (click)="sendToParent()">Send to Parent</button>
     </div>
-  \`
+  \\\`
 })
 export class ChildComponent {
   @Input() message = '';
@@ -589,7 +589,7 @@ export class ChildComponent {
     [message]="parentMessage" 
     (messageEvent)="receiveMessage($event)">
   </app-child>
-  <p>Message from child: {{ childMessage }}</p>
+  <p>Message from child: {{ '{' }}{{ '{' }} childMessage {{ '}' }}{{ '}' }}</p>
 </div>`,
       styles: `.parent-child-demo {
   padding: 20px;

@@ -74,10 +74,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
-  template: \`
-    <h1>Hello, {{ name }}!</h1>
+  template: \\\`
+    <h1>Hello, {{ '{' }}{{ '{' }} name {{ '}' }}{{ '}' }}!</h1>
     <button (click)="changeName()">Change Name</button>
-  \`
+  \\\`
 })
 export class HelloComponent {
   name = 'Angular Developer';
@@ -124,21 +124,21 @@ import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-card',
-  template: \`
+  template: \\\`
     <div class="user-card">
-      <h3>{{ user.name }}</h3>
-      <p>{{ user.email }}</p>
+      <h3>{{ '{' }}{{ '{' }} user.name {{ '}' }}{{ '}' }}</h3>
+      <p>{{ '{' }}{{ '{' }} user.email {{ '}' }}{{ '}' }}</p>
       <button (click)="sendMessage()">Send Message</button>
     </div>
-  \`,
-  styles: [\`
+  \\\`,
+  styles: [\\\`
     .user-card {
       border: 1px solid #ddd;
       padding: 16px;
       border-radius: 8px;
       margin: 8px;
     }
-  \`]
+  \\\`]
 })
 export class UserCardComponent implements OnInit, OnDestroy {
   @Input() user: any;
@@ -152,7 +152,7 @@ export class UserCardComponent implements OnInit, OnDestroy {
   }
   
   sendMessage() {
-    alert(\`Sending message to \${this.user.name}\`);
+    alert(\\\`Sending message to \\\${this.user.name}\\\`);
   }
 }
             `
@@ -394,14 +394,14 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 // app.component.html
-\`
+\\\`
 <nav>
   <a routerLink="/home" routerLinkActive="active">Home</a>
   <a routerLink="/about" routerLinkActive="active">About</a>
 </nav>
 
 <router-outlet></router-outlet>
-\`
+\\\`
 
 // user-detail.component.ts
 import { Component, OnInit } from '@angular/core';
