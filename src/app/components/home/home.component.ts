@@ -42,7 +42,7 @@ import { RouterModule } from '@angular/router';
 <span class="decorator">@Component</span>({
   <span class="property">selector</span>: <span class="string">'app-hello'</span>,
   <span class="property">template</span>: <span class="template">\`
-    &lt;h1&gt;Hello {{ name }}!&lt;/h1&gt;
+    <h1>Hello {{ '{' }}{{ '{' }} name {{ '}' }}{{ '}' }}!</h1>
     &lt;button (click)="greet()"&gt;
       Say Hello
     &lt;/button&gt;
@@ -52,7 +52,7 @@ import { RouterModule } from '@angular/router';
   <span class="property">name</span> = <span class="string">'Angular'</span>;
   
   <span class="method">greet</span>() {
-    <span class="keyword">alert</span>(<span class="template">\`Hello \${this.name}!\`</span>);
+    <span class="keyword">alert</span>(<span class="template">\`Hello \${{ '{' }}this.name{{ '}' }}!\`</span>);
   }
 }
               </pre>
